@@ -9,6 +9,9 @@
           <span class="chat-bubble__party">
             {{ $t(`parties.${party.index}.short`) }}
           </span>
+          <span class="chat-bubble__party" style="font-weight: 400">
+            Fonte: <a :href="link" style="color:var(--theme-primary-color)">{{ linkname }}</a>
+          </span> 
           <span class="chat-bubble__status">
             <StatementBadge
               :icon="statusIcon"
@@ -42,6 +45,14 @@ export default {
     content: {
       type: String,
       required: true,
+    },
+    link: {
+      type: String,
+      required: true
+    },
+    linkname: {
+      type: String,
+      required: true
     },
     direction: {
       type: String,

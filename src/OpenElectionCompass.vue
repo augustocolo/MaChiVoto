@@ -232,6 +232,16 @@ export default {
             `theses.${index}.positions.${party.alias}.explanation`,
             translations
           );
+          this.readTranslation(
+            content,
+            `theses.${index}.positions.${party.alias}.link`,
+            translations
+          )
+          this.readTranslation(
+            content,
+            `theses.${index}.positions.${party.alias}.linkname`,
+            translations
+          )
           positions[party.alias] = thesis.positions[party.alias].position;
         });
         this.$store.commit('theses/addThesis', {
@@ -303,8 +313,56 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+:root{
+    --theme-primary-color: #FF8A5E;
+    --shadow-normal: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    --shadow-focus: 0 0 0 3px rgba(0, 10, 30, .1), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    --border-radius: 5px;
+    --theme-primary-background: #FF8A5E;
+    --theme-primary-text: #000;
+    --theme-primary-border: #000000;
+    --theme-base-background: #F5F5F5;
+    --theme-base-text: #000;
+    --theme-base-border: #EDF2F7;
+    --theme-positive-background: #68D391;
+    --theme-positive-text: #FFF;
+    --theme-positive-border: #38A169;
+    --theme-neutral-background: #e6ebf0;
+    --theme-neutral-text: #4a5568;
+    --theme-neutral-border: #CBD5E0;
+    --theme-negative-background: #FC8181;
+    --theme-negative-text: #FFF;
+    --theme-negative-border: #E53E3E;
+    --theme-disabled-background: #F7FAFC;
+    --theme-disabled-text: #E2E8F0;
+    --theme-disabled-border: #EDF2F7;
+    --theme-gray-background: #CBD5E0;
+    --theme-gray-text: #000;
+    --theme-white-background: #FFF;
+    --theme-white-text: #000;
+    --theme-white-border: #CBD5E0;
+    --theme-primary-dark-background: #000000;
+    --theme-primary-dark-text: #FFF;
+    --theme-primary-dark-border: #975A16;
+    --theme-dark-background: #1b364e;
+    --theme-dark-text: #E2E8F0;
+    --theme-dark-border: #1A202C
+}
+
+.base-button.base-button--theme-primary-dark:hover {
+  background-color: #FFF;
+}
+.base-button.base-button--theme-primary-dark {
+  background-color: #FFF;
+  color: #000;
+}
+
+
 #oec-wrapper {
-  font-family: Arial, sans-serif;
+  font-family: Lato, sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -9,9 +9,9 @@
   >
     <!-- wrapping div needed for IE11 -->
     <div class="start-section__logo">
-      <OpenElectionCompassLogo width="1em" />
+      <img src="https://storage.googleapis.com/democratica-static-website-bucket/Will%2BDemocratica%20horizontal_nobg_2.png" style="width:100%"/>
     </div>
-    <h1 class="start-section__heading">
+    <h1 class="start-section__heading" style="margin-top:1em;">
       {{ $t('title') }}
     </h1>
     <p class="start-section__subtitle">{{ $t('subtitle') }}</p>

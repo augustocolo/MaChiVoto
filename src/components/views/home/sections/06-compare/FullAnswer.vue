@@ -11,6 +11,8 @@
       :text-color="colors.darker"
       :status-background-color="colors.base"
       :status-text-color="colors.contrast"
+      :link="link"
+      :linkname="linkname"
     />
   </div>
 </template>
@@ -93,6 +95,18 @@ export default {
         });
       }
       return explanation;
+    },
+    link(){
+      const link = this.$t(
+        `theses.${this.thesis.index}.positions.${this.party.alias}.link`
+      )
+      return link
+    },
+    linkname(){
+      const linkname = this.$t(
+        `theses.${this.thesis.index}.positions.${this.party.alias}.linkname`
+      )
+      return linkname
     },
     colors() {
       if (this.skipped) {
