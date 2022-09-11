@@ -104,6 +104,9 @@ export default {
     this.$store.commit('options/setFriendsHost', this.friendsHost);
     this.$store.commit('options/setFriendsPort', this.friendsPort);
     this.$store.commit('options/setFriendsPath', this.friendsPath);
+
+    //Generate Signature
+    this.$store.dispatch('analysis/generateSignature');
   },
   computed: {
     activeLanguage() {

@@ -23,7 +23,6 @@ export default {
   methods: {
     sendAnalysis() {
       this.$store.dispatch('analysis/optIn');
-      this.$store.dispatch('analysis/generateSignature');
       this.$store.dispatch('analysis/send');
     },
     close() {

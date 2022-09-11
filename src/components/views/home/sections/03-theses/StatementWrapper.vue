@@ -96,6 +96,9 @@ export default {
         this.factor = 1;
       }
       this.status = status;
+
+      // Send analysis
+      this.$store.dispatch('analysis/send');
     },
   },
   computed: {

@@ -10,7 +10,7 @@
             {{ $t(`parties.${party.index}.short`) }}
           </span>
           <span class="chat-bubble__party" style="font-weight: 400">
-            Fonte: <a :href="link" style="color:var(--theme-primary-color)">{{ linkname }}</a>
+            Fonte: <a :href="link" style="color:var(--theme-primary-color)" target=”_blank”>{{ linkname }}</a>
           </span> 
           <span class="chat-bubble__status">
             <StatementBadge
