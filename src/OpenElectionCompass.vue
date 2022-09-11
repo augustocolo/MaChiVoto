@@ -365,7 +365,7 @@ export default {
 
 
 #oec-wrapper {
-  font-family: Lato, sans-serif;
+  font-family: 'Anek Latin', sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

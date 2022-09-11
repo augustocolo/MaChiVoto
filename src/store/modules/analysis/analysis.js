@@ -97,10 +97,14 @@ export default {
         analysis[item.name] = item.value;
       });
 
+      const url_string = window.location.href;
+      const url = new URL(url_string);
+
       const data = {
         answers,
         parties,
         analysis,
+        url
       };
 
       fetch(state.endpoint, {

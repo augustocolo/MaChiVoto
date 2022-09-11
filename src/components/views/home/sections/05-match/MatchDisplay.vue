@@ -12,7 +12,7 @@
     >
       <div class="match-display__progress" :style="`width:${percentage * 100}%`" />
       <span class="match-display__party-name">
-        {{ $t(`parties.${party.index}.short`) }}
+        {{ $t(`parties.${party.index}.name`) }}
       </span>
       <span class="match-display__percentage">
         <bdi>
@@ -76,13 +76,14 @@ export default {
 }
 
 .match-display__percentage {
-  color: #000;
+  color: var(--theme-primary-color);
   position: absolute;
   display: block;
   padding: 1em;
   top: 0;
   right: 0;
   bottom: 0;
+  font-weight: bold;
   [dir='rtl'] & {
     right: unset;
     left: 0;

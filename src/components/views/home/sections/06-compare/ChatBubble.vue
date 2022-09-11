@@ -7,7 +7,8 @@
       <footer class="chat-bubble__footer" aria-hidden="true">
         <cite>
           <span class="chat-bubble__party">
-            {{ $t(`parties.${party.index}.short`) }}
+            <img :src="party.logo" style="margin:auto; max-width: 5em;"/>
+            {{ $t(`parties.${party.index}.name`) }}
           </span>
           <span class="chat-bubble__party" style="font-weight: 400">
             Fonte: <a :href="link" style="color:var(--theme-primary-color)" target=”_blank”>{{ linkname }}</a>
@@ -229,7 +230,7 @@ export default {
     margin-bottom: 0;
     padding: 1.5em 0;
     .chat-bubble__party {
-      text-align: right;
+      text-align: center;
     }
   }
 
@@ -243,7 +244,7 @@ export default {
     margin-bottom: 0;
     padding: 1.5em 0;
     .chat-bubble__party {
-      text-align: left;
+      text-align: center;
     }
   }
 }
