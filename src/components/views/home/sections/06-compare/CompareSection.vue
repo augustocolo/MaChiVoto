@@ -1,8 +1,20 @@
 <template>
   <div class="compare-section">
     <PageSection class="compare-section__introduction" data-section="compare">
-      <h2 class="compare-section__heading">{{ $t('views.home.compare.section.heading') }}</h2>
-      <p>{{ $t('views.home.compare.section.explanation') }}</p>
+      <h2 class="compare-section__heading">Chi siamo</h2>
+      <h3 class="compare-section__heading">Democratica</h3>
+      <p>Democratica è un progetto senza scopo di lucro, ideato e sviluppato da Pietro Valfrè, Augusto Colongo e Andrea Cognolato, in collaborazione con Social Innovation Teams, la community nonprofit per progetti e startup a impatto sociale e ambientale.</p>
+      <h3 class="compare-section__heading" style="margin-top:1.5em">Will</h3>
+      <p>Will è una community di persone che guardano con passione ai grandi cambiamenti del nostro tempo e a come farne parte per una politica, un'economia e un mondo migliori.</p>
+      <a
+        href="https://www.google.com"
+        target="_blank"
+        class="base-button base-button--theme-primary base-button--size-large base-button--text-align-center compare-section__will-button"> 
+        I NOSTRI CONTENUTI SULLE ELEZIONI DEL 25 SETTEMBRE</a>
+    </PageSection>
+    <PageSection class="compare-section__introduction" data-section="compare">
+      <h2 class="compare-section__heading">Le posizioni dei partiti</h2>
+      <p>Abbiamo raccolto le posizioni dei partiti all'interno dei programmi elettorali o le dichiarazioni dei principali esponenti sui temi su cui hai espresso la tua posizione, tuttavia raccomandiamo la lettura integrale dei programmi per una comprensione più completa.</p>
       <KioskModeHint v-if="kioskMode" />
     </PageSection>
     <PageSection
@@ -79,5 +91,11 @@ export default {
 
 .compare-section__theses + .compare-section__theses {
   border-top: 2px solid var(--theme-neutral-background);
+}
+
+.compare-section__will-button {
+  margin-top: 1rem;
+  font-weight: bold;
+  background-color: var(--theme-primary-color)!important;
 }
 </style>
