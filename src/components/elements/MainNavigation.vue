@@ -338,6 +338,7 @@ export default {
 }
 
 .main-navigation__toggle {
+  display:none;
   position: fixed;
   z-index: 301;
   top: 1.5rem;

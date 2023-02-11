@@ -18,6 +18,17 @@
       <StatementText :index="index" :status="status" />
     </div>
 
+    <!-- Important Toggle -->
+    <div class="statement-wrapper__important-button statement-wrapper__important-button-top">
+      <ImportantButton
+        :name="`important-${index}`"
+        v-model:factor="factor"
+        :disabled="(status && direction === 'neutral') || maxImportantReached"
+        :tooltip-disabled="!maxImportantReached || direction === 'neutral' || status === 'skip'"
+        :max-important="maxImportant"
+      />
+    </div>
+
     <!-- Buttons -->
     <div class="statement-wrapper__skip">
       <SkipButton
@@ -42,9 +53,8 @@
         tabindex="0"
       />
     </div>
-
     <!-- Important Toggle -->
-    <div class="statement-wrapper__important-button">
+    <div class="statement-wrapper__important-button statement-wrapper__important-button-bottom ">
       <ImportantButton
         :name="`important-${index}`"
         v-model:factor="factor"
@@ -195,12 +205,9 @@ export default {
 }
 
 .statement-wrapper__statement {
-  padding: 2em;
+  padding: 1em;
   @media (min-width: 40em) {
-    padding-bottom: 4em;
-  }
-  @media (min-width: 64em) {
-    padding-bottom: 6em;
+    padding-bottom: 1em;
   }
 }
 
@@ -227,13 +234,28 @@ export default {
 }
 
 .statement-wrapper__important-button {
-  margin: 2em 2em 2em 2em;
   text-align: center;
   @media (min-width: 48em) {
-    margin: 3em 1.5em 0 1.5em;
+    margin: 1em 1.5em 0 1.5em;
   }
   @media (min-width: 64em) {
-    margin-top: 6em;
+    margin-top: 1em;
+  }
+}
+
+.statement-wrapper__important-button-top {
+  margin: 1em 2em 1em 2em;
+  display: none;
+  @media (min-width: 800px){
+    display: block;
+  }
+}
+
+.statement-wrapper__important-button-bottom {
+  margin: 2em;
+  display: block;
+  @media (min-width: 800px){
+    display: none;
   }
 }
 </style>

@@ -59,6 +59,8 @@ export default {
 <style lang="scss">
 .skip-button {
   text-align: right;
+  border: 2px solid var(--theme-neutral-border);
+  border-radius: var(--border-radius);
 }
 .skip-button__tooltip-wrapper {
   text-align: left;

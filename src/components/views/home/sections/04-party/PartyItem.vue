@@ -24,8 +24,8 @@
       <div class="party-item__caption" aria-hidden="true">
         <IconDisplay :name="selected ? 'check' : 'circle'" class="party-item__icon" />
         <div class="party-item__details" aria-hidden="true">
-          <span class="party-item__short">{{ $t(`parties.${index}.short`) }}</span>
-          <span class="party-item__name">{{ $t(`parties.${index}.name`) }}</span>
+          <span class="party-item__short">{{ $t(`parties.${index}.name`) }}</span>
+          <span class="party-item__name">{{ $t(`parties.${index}.description`) }}</span>
         </div>
       </div>
     </button>

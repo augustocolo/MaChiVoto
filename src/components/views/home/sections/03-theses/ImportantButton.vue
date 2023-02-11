@@ -120,6 +120,7 @@ export default {
   }
   @media (min-width: 48em) {
     font-size: 1.125em;
+    padding: .5em;
   }
   @media (min-width: 64em) {
     font-size: 1.25em;

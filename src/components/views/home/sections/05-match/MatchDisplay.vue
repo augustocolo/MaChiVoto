@@ -12,7 +12,13 @@
     >
       <div class="match-display__progress" :style="`width:${percentage * 100}%`" />
       <span class="match-display__party-name">
+        <img :src="party.logo" style="max-height:30px"/>
+        <p class="match-display__party-name__full">
         {{ $t(`parties.${party.index}.name`) }}
+        </p>
+        <p class="match-display__party-name__short">
+        {{ $t(`parties.${party.index}.short`) }}
+        </p>
       </span>
       <span class="match-display__percentage">
         <bdi>
@@ -71,8 +77,12 @@ export default {
   font-weight: bold;
   color: #000;
   position: relative;
-  display: block;
+  display: flex;
   padding: 1em;
+}
+
+.match-display__party-name img{
+  margin-right: .5em;
 }
 
 .match-display__percentage {
@@ -96,6 +106,20 @@ export default {
   font-size: 0.875em;
   @media (min-width: 40em) {
     font-size: 1em;
+  }
+}
+
+.match-display__party-name__full{
+  display: none;
+  @media (min-width:830px) {
+    display:block;
+  }
+}
+
+.match-display__party-name__short{
+  display: block;
+  @media (min-width:830px) {
+    display:none;
   }
 }
 </style>

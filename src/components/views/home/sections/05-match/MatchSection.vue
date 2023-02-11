@@ -3,14 +3,14 @@
     <h2 class="match-section__heading">
       {{ $t('views.home.match.section.heading') }}
     </h2>
-    <p class="match-section__explanation">
-      {{ $t('views.home.match.section.explanation') }}
-    </p>
     <ul>
       <li v-for="{ party, percentage } in results" :key="party.alias">
         <MatchDisplay :party="party" :percentage="percentage" />
       </li>
     </ul>
+    <p class="match-section__explanation">
+      {{ $t('views.home.match.section.explanation') }}
+    </p>
   </PageSection>
 </template>
 

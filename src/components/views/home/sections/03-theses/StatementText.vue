@@ -128,13 +128,13 @@ export default {
     },
     badgeText() {
       if (this.skipped) {
-        return this.$t('views.home.theses.statement.badge.skip');
+        return this.$t('views.home.theses.statement-text.statement-badge.skip');
       }
       return this.$t(`algorithm.options.${this.option.alias}.badge`);
     },
     badgeTextAria() {
       if (this.skipped) {
-        return this.$t('views.home.theses.statement.badge.skip-aria');
+        return this.$t('views.home.theses.statement-text.statement-badge.badge.skip-aria');
       }
       return this.$t(`algorithm.options.${this.option.alias}.badge-aria`);
     },
@@ -172,7 +172,7 @@ export default {
 }
 
 .statement-text__title {
-  color: #777;
+  color: var(--theme-primary-color);
 }
 
 .statement-text__thesis {
@@ -185,21 +185,19 @@ export default {
   overflow-wrap: break-word;
   @media (min-width: 40em) {
     font-size: 1.875em;
-    max-width: 42rem;
   }
   @media (min-width: 48em) {
     font-size: 2.25em;
   }
   @media (min-width: 64em) {
-    font-size: 3em;
-    max-width: 48rem;
+    font-size: 2.5em;
   }
 }
 
 .statement-text.statement-text--status-empty,
 .statement-text.statement-text--status-skip {
   .statement-text__thesis {
-    color: var(--theme-primary-color);
+    color: #000;
   }
 }
 .statement-text.statement-text--status-skip .statement-text__thesis {

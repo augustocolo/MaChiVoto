@@ -11,7 +11,7 @@
     <BaseButton class="analysis-banner__send" theme="primary" size="small" @click="sendAnalysis">
       {{ $t('views.home.compare.analysis-banner.send') }}
     </BaseButton>
-    <BaseButton class="analysis-banner__close" theme="positive" @click="close">
+    <BaseButton class="analysis-banner__close" theme="neutral" @click="close">
       {{ $t('views.home.compare.analysis-banner.close') }}
     </BaseButton>
   </aside>
@@ -56,11 +56,13 @@ export default {
 }
 
 .analysis-banner__send {
+  font-size: 1.15em!important;
   margin-top: 1.5em;
   width: 100%;
 }
 
 .analysis-banner__close {
+  font-size: 1em!important;
   margin-top: 0.5em;
   width: 100%;
 }
@@ -81,5 +83,9 @@ export default {
   .analysis-banner {
     margin: 105vh 2em 0 auto;
   }
+}
+
+.field-switch__input:checked+.field-switch__button {
+  background-color: var(--theme-primary-color);
 }
 </style>

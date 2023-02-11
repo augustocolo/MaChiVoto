@@ -264,7 +264,7 @@ export default {
         this.$store.commit('parties/addParty', {
           index,
           alias: party.alias,
-          selected: content.parties.length > 9, // preselect all parties if there are too many
+          selected: true, // preselect all parties if there are too many
           logo: party.logo === undefined ? null : party.logo,
         });
       });
@@ -363,6 +363,19 @@ export default {
   color: #000;
 }
 
+.base-button.base-button--theme-primary {
+  background-color: var(--theme-primary-background);
+  border: 2px solid #000;
+
+  @media screen and (min-width: 50rem){
+    padding: .5em;
+  }
+}
+
+.base-button.base-button--theme-primary:hover {
+  background-color: var(--theme-primary-background);
+  border: 2px solid #111;
+}
 
 #oec-wrapper {
   font-family: 'Anek Latin', sans-serif;

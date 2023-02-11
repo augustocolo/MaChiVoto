@@ -29,6 +29,7 @@
             select: 'FieldSelect',
           }[currentQuestion.type]
         "
+        class="additional-analysis__scroll"
         :key="currentQuestion.alias"
         :alias="currentQuestion.alias"
         :type="currentQuestion.type"
@@ -100,10 +101,6 @@ export default {
     questions() {
       return [
         {
-          alias: 'start',
-          type: 'start',
-        },
-        {
           alias: 'age',
           type: 'number',
           name: this.$t('views.home.compare.additional-analysis.fields.age.name'),
@@ -123,14 +120,14 @@ export default {
               ),
             },
             {
-              value: 'diverse',
+              value: 'male',
+              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.male'),
+            },
+            {
+              value: 'other',
               option: this.$t(
                 'views.home.compare.additional-analysis.fields.gender.options.diverse'
               ),
-            },
-            {
-              value: 'male',
-              option: this.$t('views.home.compare.additional-analysis.fields.gender.options.male'),
             },
             {
               value: 'none',
@@ -140,88 +137,189 @@ export default {
           rules: 'required',
         },
         {
-          alias: 'education',
+          alias: 'job',
           type: 'switch',
-          name: this.$t('views.home.compare.additional-analysis.fields.education.name'),
-          label: this.$t('views.home.compare.additional-analysis.fields.education.label'),
+          name: this.$t('views.home.compare.additional-analysis.fields.job.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.job.label'),
           options: [
+            {
+              value: 'self-employed',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.job.options.self-employed'
+              ),
+            },
+            {
+              value: 'public',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.job.options.public'
+              ),
+            },
+            {
+              value: 'private',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.job.options.private'
+              ),
+            },
+            {
+              value: 'unemployed',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.job.options.unemployed'
+              ),
+            },
             {
               value: 'student',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.student'
+                'views.home.compare.additional-analysis.fields.job.options.student'
               ),
             },
             {
-              value: 'nothing',
+              value: 'retired',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.nothing'
-              ),
-            },
-            {
-              value: 'lower',
-              option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.lower'
-              ),
-            },
-            {
-              value: 'higher',
-              option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.higher'
-              ),
-            },
-            {
-              value: 'academic',
-              option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.academic'
+                'views.home.compare.additional-analysis.fields.job.options.retired'
               ),
             },
             {
               value: 'none',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.education.options.none'
+                'views.home.compare.additional-analysis.fields.job.options.none'
               ),
             },
           ],
           rules: 'required',
         },
         {
-          alias: 'party',
-          type: 'select',
-          name: this.$t('views.home.compare.additional-analysis.fields.party.name'),
-          label: this.$t('views.home.compare.additional-analysis.fields.party.label'),
-          options: (() => {
-            const options = this.parties.map((party) => ({
-              value: party.alias,
-              option: this.$t(`parties.${party.index}.short`),
-            }));
-            options.push({
-              value: '###OTHER###',
-              option: this.$t('views.home.compare.additional-analysis.fields.party.options.other'),
-            });
-            options.push({
-              value: '###NON_VOTER###',
+          alias: 'region',
+          type: 'switch',
+          name: this.$t('views.home.compare.additional-analysis.fields.region.name'),
+          label: this.$t('views.home.compare.additional-analysis.fields.region.label'),
+          options: [
+          {
+              value: 'abruzzo',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.party.options.non-voter'
+                'views.home.compare.additional-analysis.fields.region.options.abruzzo'
               ),
-            });
-            options.push({
-              value: '###NOT_ELIGIBLE###',
+            },
+            {
+              value: 'basilicata',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.party.options.not-eligible'
+                'views.home.compare.additional-analysis.fields.region.options.basilicata'
               ),
-            });
-            options.push({
-              value: '###NOT_SURE###',
+            },
+            {
+              value: 'calabria',
               option: this.$t(
-                'views.home.compare.additional-analysis.fields.party.options.not-sure'
+                'views.home.compare.additional-analysis.fields.region.options.calabria'
               ),
-            });
-            options.push({
-              value: '###NONE###',
-              option: this.$t('views.home.compare.additional-analysis.fields.party.options.none'),
-            });
-            return options;
-          })(),
+            },
+            {
+              value: 'campania',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.campania'
+              ),
+            },
+            {
+              value: 'emilia-romagna',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.emilia-romagna'
+              ),
+            },
+            {
+              value: 'friuli-venezia-giulia',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.friuli-venezia-giulia'
+              ),
+            },
+            {
+              value: 'lazio',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.lazio'
+              ),
+            },
+            {
+              value: 'liguria',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.liguria'
+              ),
+            },
+            {
+              value: 'lombardia',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.lombardia'
+              ),
+            },
+            {
+              value: 'marche',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.marche'
+              ),
+            },
+            {
+              value: 'molise',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.molise'
+              ),
+            },
+            {
+              value: 'piemonte',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.piemonte'
+              ),
+            },
+            {
+              value: 'puglia',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.puglia'
+              ),
+            },
+            {
+              value: 'sardegna',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.sardegna'
+              ),
+            },
+            {
+              value: 'sicilia',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.sicilia'
+              ),
+            },
+            {
+              value: 'toscana',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.toscana'
+              ),
+            },
+            {
+              value: 'trentino-alto-adige',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.trentino-alto-adige'
+              ),
+            },
+            {
+              value: 'umbria',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.umbria'
+              ),
+            },
+            {
+              value: 'valle-aosta',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.valle-aosta'
+              ),
+            },
+            {
+              value: 'veneto',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.veneto'
+              ),
+            },
+            {
+              value: 'estero',
+              option: this.$t(
+                'views.home.compare.additional-analysis.fields.region.options.estero'
+              ),
+            }
+          ],
           rules: 'required',
         },
         {
@@ -316,6 +414,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+div.modal__actions {
+  flex-direction: column-reverse;
+}
 @media (min-width: 40em) {
   .additional-analysis__start,
   .additional-analysis__end {
@@ -323,5 +425,9 @@ export default {
       font-size: 1.25em;
     }
   }
+}
+
+.additional-analysis__scroll{
+  overflow:scroll;
 }
 </style>

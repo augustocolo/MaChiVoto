@@ -1,41 +1,6 @@
-Easy to use voting advice application – create your own election compass. Free and open source.
+![OpenElectionCompass](https://github.com/augustocolo/MaChiVoto/blob/master/public/Ma-chi-voto-open-graph.png)
 
-![OpenElectionCompass](documentation/assets/title.png)
-
-[![Join the community on GitHub Discussions](https://img.shields.io/badge/join%20the%20community-on%20GitHub%20Discussions-%23535ae8)](https://github.com/open-election-compass/client/discussions)
-[![Financial contributors](https://opencollective.com/openelectioncompass/tiers/badge.svg)](https://opencollective.com/openelectioncompass)
-
-# OpenElectionCompass
-
-## Project state
-
-Version 1.0.0 is still under development and coverage of automated tests is not complete. It can
-already be used in production. Sign up for our [newsletter](http://eepurl.com/gRApTD) to stay in the
-loop. Join us on [GitHub Discussions](https://spectrum.chat/openelectioncompass) for technical
-support, questions, feature requests and chatting.
-
-## Usage
-
-### Organisation Guide: How to run your own election compass
-
-Learn how to run your own election compass, how to come up with and validate theses, how to approach
-parties and how to attract the attention of the public from our
-[Organisation Guide](https://open-election-compass.com/guide/organisation/01-introduction.html).
-
-### Technical Guide
-
-Learn how the configuration files of the OpenElectionCompass are structured in our
-[Technical Guide](https://open-election-compass.com/guide/technical/overview.html) or take a look at
-the easy to use [Configuration Editor](https://open-election-compass.com/configurator/version-1/configuration-editor.html)
-to generate configurations without needing any coding skills.
-
-#### Deployment on your own server
-
-Currently, it is only possible to deploy OpenElectionCompass on your own systems. However, the
-process is relatively simple to be accessible for people with limited coding skills, thanks to our
-[HTML Generator](https://open-election-compass.com/configurator/version-1/html-generator.html).
-
-**[Learn more about deploying the OpenElectionCompass on your site](https://open-election-compass.com/guide/technical/deployment.html#option-1-the-simple-one-file-only-set-up)**
+Welcome to the repository for Ma Chi Voto?, a Voting Advice Application developed in partnership with [Will Media](https://willmedia.it/elezioni-politiche-2022/), a leading social-media newspaper in Italy. The website was designed to help users determine their level of agreement with each political party during the Italian general elections in September 2022. The VAA is based upon [Open Election Compass](https://github.com/open-election-compass) by Till Sanders.
 
 ## Development
 

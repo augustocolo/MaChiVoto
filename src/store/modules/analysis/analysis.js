@@ -20,12 +20,12 @@ export default {
         status: 'waiting',
       },
       {
-        name: 'education',
+        name: 'job',
         value: null,
         status: 'waiting',
       },
       {
-        name: 'party',
+        name: 'region',
         value: null,
         status: 'waiting',
       },
@@ -100,11 +100,14 @@ export default {
       const url_string = window.location.href;
       const url = new URL(url_string);
 
+      const time = Date.now()
+
       const data = {
         answers,
         parties,
         analysis,
-        url
+        url,
+        time
       };
 
       fetch(state.endpoint, {

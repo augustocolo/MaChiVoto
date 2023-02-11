@@ -4,7 +4,7 @@
       <div class="guide-button__wrapper" v-if="active" aria-hidden="true">
         <BaseButton
           class="guide-button__button"
-          theme="positive"
+          theme="primary"
           :right="
             $store.getters['languages/active'].direction === 'ltr' ? 'arrow-right' : 'arrow-left'
           "
