@@ -1,4 +1,4 @@
-![OpenElectionCompass](https://github.com/augustocolo/MaChiVoto/blob/master/public/Ma-chi-voto-open-graph.png)
+![Ma Chi Voto?](https://raw.githubusercontent.com/augustocolo/MaChiVoto/master/public/Ma-chi-voto-open-graph.jpg)
 
 Welcome to the repository for Ma Chi Voto?, a Voting Advice Application developed in partnership with [Will Media](https://willmedia.it/elezioni-politiche-2022/), a leading social-media newspaper in Italy. The website was designed to help users determine their level of agreement with each political party during the Italian general elections in September 2022. The VAA is based upon [Open Election Compass](https://github.com/open-election-compass) by Till Sanders.
 
